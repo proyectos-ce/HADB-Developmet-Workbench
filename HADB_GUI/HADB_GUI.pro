@@ -25,7 +25,8 @@ SOURCES += main.cpp\
     manage_database.cpp \
     table.cpp \
     connectionmanager.cpp \
-    comunication_handler.cpp
+    comunication_handler.cpp \
+    jsonutils.cpp
 
 HEADERS  += mainwindow.h \
     menu.h \
@@ -41,7 +42,8 @@ HEADERS  += mainwindow.h \
     connectionmanager.h \
     ../../../../Descargas/json.hpp \
     json.hpp \
-    comunication_handler.h
+    comunication_handler.h \
+    jsonutils.h
 
 FORMS    += mainwindow.ui \
     menu.ui \

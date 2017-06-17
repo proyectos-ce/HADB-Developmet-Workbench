@@ -4,6 +4,11 @@ Table::Table()
 {
 
 }
+
+Table::Table(std::string name) {
+    this->name = name;
+}
+
 bool Table::insertColumn(std::string name, int type)
 {
     bool result = false;
@@ -51,6 +56,10 @@ bool Table::removeColumn(int index)
         result = true;
     }
     return result;
+}
+
+bool Table::removeColumn(std::string name) {
+    return removeColumn(getColumnIndex(name));
 }
 
 bool Table::removeRow(int index)
@@ -176,6 +185,21 @@ void Table::setColumnProperties(const std::vector<ColumnProperties> &value)
     columnProperties = value;
 }
 
+std::string Table::getPrimaryKey() const
+{
+    return primaryKey;
+}
+
+void Table::setPrimaryKey(const std::string &value)
+{
+    primaryKey = value;
+}
+
+int Table::getPrimaryKeyIndex()
+{
+    return getColumnIndex(primaryKey);
+}
+
 bool Table::checkIfColumnExists(std::string name)
 {
     return getColumnIndex(name) != -1;
@@ -192,6 +216,32 @@ int Table::getColumnIndex(std::string name)
     }
     return result;
 }
+
+void Table::setRows(const std::vector<Row> &value)
+{
+    rows = value;
+}
+
+bool Table::updateColumn(std::string name, std::string value)
+{
+    bool result = false;
+    int index = getColumnIndex(name);
+    if(index == -1){
+        updateColumn(index, value);
+        result = true;
+    }
+    return result;
+}
+
+bool Table::updateColumn(int index, std::string value)
+{
+    for (int i = 0; i < rows.size(); ++i) {
+        rows[i].contents[index]=value;
+    }
+    return true;
+}
+
+
 
 ColumnProperties::ColumnProperties(std::string name, int type)
 {

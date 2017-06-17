@@ -1,9 +1,9 @@
 #ifndef TABLE_H
 #define TABLE_H
+
 #include <vector>
 #include <string>
 //#include "row.h"
-
 
 
 class Row
@@ -20,8 +20,9 @@ public:
     void setIndex(int value);
     std::vector<std::string> getContents() const;
     void reset();
-private:
     std::vector<std::string> contents;
+
+private:
     bool validateColumn(int index);
     int index = -1;
 };
@@ -51,11 +52,13 @@ class Table
 {
 public:
     Table();
+    Table(std::string name);
     bool insertColumn(std::string name, int type=-1);
     bool insertRow(Row row);
     bool insertRow(std::vector<std::string> dataRow);
     //bool removeColumn(std::string name);
     bool removeColumn(int index);
+    bool removeColumn(std::string name);
     bool removeRow(int index);
     Row getRow(int index) const;
     std::vector<Row> getRows(std::vector<int> rowsIndexes) const;
@@ -68,17 +71,25 @@ public:
     bool setColumnType(int index, int type);
     int getTotalRows()const;
     int getTotalColumns()const;
-
-
     std::vector<ColumnProperties> getColumnProperties() const;
     void setColumnProperties(const std::vector<ColumnProperties> &value);
+    std::string getPrimaryKey() const;
+    void setPrimaryKey(const std::string &value);
+    int getPrimaryKeyIndex();
+    int getColumnIndex(std::string name);
+    //void setRows(const std::vector<Row, std::allocator<Row>> &value);
+    void setRows(const std::vector<Row> &value);
+    bool updateColumn(std::string name, std::string value);
 
 private:
-    std::string name;
     std::vector<Row> rows;
+    std::string name;
+    std::string primaryKey;
     std::vector<ColumnProperties> columnProperties;
     bool checkIfColumnExists(std::string name);
-    int getColumnIndex(std::string name);
+    bool updateColumn(int index, std::string value);
+
+
 
 };
 

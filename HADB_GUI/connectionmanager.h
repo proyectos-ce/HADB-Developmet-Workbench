@@ -7,11 +7,11 @@
 #include <string.h>
 
 #include "json.hpp"
+using json = nlohmann::json;
 
 
 #define PORT 8888
 
-using json = nlohmann::json;
 
 class ConnectionManager {
 public:
@@ -23,8 +23,11 @@ public:
     char buffer[1024*10] = {0};
 
 
-private:
+    json getLastReceived() const;
+    void setLastReceived(const json &value);
 
+private:
+    json lastReceived;
     struct sockaddr_in address;
 
     struct sockaddr_in serv_addr;

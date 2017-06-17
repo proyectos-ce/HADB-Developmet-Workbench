@@ -73,6 +73,15 @@ void Manage_Database::on_pushButton_clicked(){
         if(j["command"]=="table"){
             Table table = JSONutils::jsonToTable(j["table"]);
             showTable(table);
+        }else if(j["command"]=="responseCode"){
+            std::string str = j["code"];
+            std::string str2= j["affected_entries"];
+            std:string str3 = j["description"];
+            message_printer(str);
+            message_printer(str2);
+            message_printer(str3);
+        }else{
+            message_printer("Error in Command");
         }
     }
 

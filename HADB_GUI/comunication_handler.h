@@ -8,15 +8,21 @@
 #include <string.h>
 #include <fstream>
 
+//#include "json.hpp"
+//using json = nlohmann::json;
+
 class Comunication_Handler
 {
 public:
     Comunication_Handler();
     ConnectionManager* connection;
     void setConnection(ConnectionManager *value);
-    void sendMessage();
+    void sendMessage(std::string message);
     void receiveMessage();
     void react();
+    json lastReceived;
+    json getLastReceived() const;
+    void setLastReceived(const json &value);
 };
 
 #endif // COMUNICATION_HANDLER_H

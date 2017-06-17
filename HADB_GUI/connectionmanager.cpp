@@ -56,6 +56,7 @@ void ConnectionManager::actFromJSONFile() {
     if (j["command"] == "identify_yourself"){
         identify();
     }
+    setLastReceived(j);
 
 }
 
@@ -65,4 +66,14 @@ void ConnectionManager::identify() {
     identityJSON["identity"] = "client";
     std::string identityString = identityJSON.dump();
     send(sock, identityString.c_str(), identityString.size(), 0);
+}
+
+json ConnectionManager::getLastReceived() const
+{
+    return lastReceived;
+}
+
+void ConnectionManager::setLastReceived(const json &value)
+{
+    lastReceived = value;
 }
