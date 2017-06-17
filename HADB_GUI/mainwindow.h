@@ -23,6 +23,8 @@ private slots:
 
 private:
     Ui::MainWindow *ui;
+    string port;
+    string ip;
 };
 
 #endif // MAINWINDOW_H

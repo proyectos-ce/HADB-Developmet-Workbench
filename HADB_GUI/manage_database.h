@@ -9,9 +9,14 @@
 #include "create_index.h"
 #include "create_table.h"
 #include "drop_table.h"
+#include <iostream>
+#include <string>
 
-
+//class Create_Table;
 using namespace std;
+
+
+class Create_Table;
 
 namespace Ui {
 class Manage_Database;
@@ -24,7 +29,13 @@ class Manage_Database : public QDialog
 public:
 
     Create_Index create_index;
-    Create_Table create_table;
+
+
+    Create_Table* create_table;
+
+
+    void message_printer(string command);
+
     Drop_Table drop_table;
     explicit Manage_Database(QWidget *parent = 0);
     ~Manage_Database();
@@ -45,7 +56,7 @@ private slots:
 private:
     void showTable (Table table);
     Table myTable;
-    void message_printer(string command);
+
     string entered_string;
     Ui::Manage_Database *ui;
      std::vector<std::vector<std::string> > matrix;

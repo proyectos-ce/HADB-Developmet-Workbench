@@ -16,8 +16,9 @@ class Show_Structure : public QDialog
 public:
     explicit Show_Structure(QWidget *parent = 0);
     ~Show_Structure();
-    QMovie *movie= new QMovie("structure.gif");
-    QLabel label;
+
+     QMovie *movie= new QMovie("structure.gif");
+
 private:
     Ui::Show_Structure *ui;
 };

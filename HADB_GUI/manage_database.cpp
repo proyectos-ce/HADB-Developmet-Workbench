@@ -1,12 +1,6 @@
 #include "manage_database.h"
 #include "ui_manage_database.h"
-#include <iostream>
-#include <string>
-#include "table.h"
-#include <vector>
-#include "create_index.h"
-#include "create_table.h"
-#include "drop_table.h"
+//#include "create_table.h"
 
 using namespace std;
 
@@ -20,23 +14,34 @@ Manage_Database::Manage_Database(QWidget *parent) :
       myTable.insertColumn("id", INT );
       myTable.insertColumn("nombre", STRING );
       myTable.insertColumn("altura", DOUBLE );
+      myTable.insertColumn("edad", INT );
 
+      create_table->setParent(this);
 
     //  std::cout << myTable.toString();
       Row newRow;
       newRow.insertColumn("1");
       newRow.insertColumn("Tavo");
       newRow.insertColumn("170.1");
+      newRow.insertColumn("20");
       myTable.insertRow(newRow);
       newRow.reset();
       newRow.insertColumn("2");
       newRow.insertColumn("Daniel");
       newRow.insertColumn("170.2");
+      newRow.insertColumn("18");
       myTable.insertRow(newRow);
       newRow.reset();
       newRow.insertColumn("3");
       newRow.insertColumn("Jimena");
       newRow.insertColumn("170.3");
+      newRow.insertColumn("19");
+      myTable.insertRow(newRow);
+      newRow.reset();
+      newRow.insertColumn("4");
+      newRow.insertColumn("joseph");
+      newRow.insertColumn("140.3");
+      newRow.insertColumn("19");
       myTable.insertRow(newRow);
       newRow.reset();
      // std::cout << myTable.toString()<<"\n";
@@ -57,9 +62,10 @@ void Manage_Database::on_buttonBox_accepted()
 }
 
 void Manage_Database::on_pushButton_clicked(){
-    entered_string = ui->LineEntry->text().toStdString();
-     message_printer(entered_string);
+   // entered_string = ui->LineEntry->text().toStdString();
+    // message_printer(entered_string);
 
+    showTable(myTable);
 
 //    entered_string = ui->LineEntry->text().toStdString();
 //    std::cout << entered_string << std::endl;
@@ -87,7 +93,7 @@ void Manage_Database::showTable(Table table){
     ui->tableWidget->setRowCount(0);
     ui->tableWidget->setColumnCount(table.getTotalColumns());
     for(int i = 0; i < table.getTotalColumns(); i++){
-        ui->tableWidget->setColumnWidth(i,830/table.getTotalColumns());
+        ui->tableWidget->setColumnWidth(i,835/table.getTotalColumns());
     }
     matrix = table.getTableAsMatrix();
     QStringList rowList2;
@@ -116,7 +122,8 @@ void Manage_Database::on_pushButton_4_clicked()
 
 void Manage_Database::on_pushButton_3_clicked()
 {
-    create_table.show();
+
+    create_table->show();
 }
 
 void Manage_Database::on_pushButton_2_clicked()

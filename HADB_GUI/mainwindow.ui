@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1207</width>
-    <height>740</height>
+    <width>1048</width>
+    <height>655</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -483,7 +483,7 @@ background-color: rgb(170, 170, 255);</string>
      <string>HADB IP:</string>
     </property>
    </widget>
-   <widget class="QLineEdit" name="lineEdit">
+   <widget class="QLineEdit" name="getIp">
     <property name="geometry">
      <rect>
       <x>350</x>
@@ -529,7 +529,7 @@ background-color: rgb(170, 170, 255);</string>
      <string>HADB PORT:</string>
     </property>
    </widget>
-   <widget class="QLineEdit" name="lineEdit_2">
+   <widget class="QLineEdit" name="getPort">
     <property name="geometry">
      <rect>
       <x>410</x>
@@ -544,20 +544,54 @@ background-color: rgb(170, 170, 255);</string>
      </font>
     </property>
    </widget>
+   <widget class="QLabel" name="label_5">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>1051</width>
+      <height>611</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap>fondo.jpg</pixmap>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_6">
+    <property name="geometry">
+     <rect>
+      <x>180</x>
+      <y>280</y>
+      <width>581</width>
+      <height>181</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgba(167, 167, 167,0.6);</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <zorder>label_5</zorder>
+   <zorder>label_6</zorder>
    <zorder>label_2</zorder>
    <zorder>label</zorder>
    <zorder>label_3</zorder>
-   <zorder>lineEdit</zorder>
+   <zorder>getIp</zorder>
    <zorder>Conect_BUTTON</zorder>
    <zorder>label_4</zorder>
-   <zorder>lineEdit_2</zorder>
+   <zorder>getPort</zorder>
   </widget>
   <widget class="QMenuBar" name="menuBar">
    <property name="geometry">
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>1207</width>
+     <width>1048</width>
      <height>19</height>
     </rect>
    </property>

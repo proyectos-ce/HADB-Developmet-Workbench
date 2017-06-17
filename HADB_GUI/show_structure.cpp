@@ -6,9 +6,11 @@ Show_Structure::Show_Structure(QWidget *parent) :
     ui(new Ui::Show_Structure)
 {
     ui->setupUi(this);
-    this->movie->setScaledSize(QSize(425,720));
+    movie->setScaledSize(QSize(425,720));
     ui->labelgif->setMovie(movie);
-    this->movie->start();
+    movie->start();
+
+
 }
 
 Show_Structure::~Show_Structure()

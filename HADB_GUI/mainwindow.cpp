@@ -18,6 +18,13 @@ MainWindow::~MainWindow()
 
 void MainWindow::on_Conect_BUTTON_clicked()
 {
+    ip= ui->getIp->text().toStdString();;
+    port= ui->getPort->text().toStdString();;
+
+    QMessageBox messageBox;
+    messageBox.critical(0,"Error","An error has occured !");
+    messageBox.setFixedSize(500,200);
+
     menu.show();
     this->hide();
 }
