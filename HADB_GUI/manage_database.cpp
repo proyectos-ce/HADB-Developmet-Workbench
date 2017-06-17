@@ -16,8 +16,6 @@ Manage_Database::Manage_Database(QWidget *parent) :
       myTable.insertColumn("altura", DOUBLE );
       myTable.insertColumn("edad", INT );
 
-      create_table->setParent(this);
-
     //  std::cout << myTable.toString();
       Row newRow;
       newRow.insertColumn("1");
@@ -123,7 +121,7 @@ void Manage_Database::on_pushButton_4_clicked()
 void Manage_Database::on_pushButton_3_clicked()
 {
 
-    create_table->show();
+    create_table.show();
 }
 
 void Manage_Database::on_pushButton_2_clicked()

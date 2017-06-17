@@ -459,7 +459,7 @@
     </property>
     <property name="styleSheet">
      <string notr="true">
-background-color: rgb(170, 170, 255);</string>
+background-color: rgba(170, 170, 255,0.8);</string>
     </property>
     <property name="text">
      <string/>

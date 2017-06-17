@@ -31,7 +31,7 @@ public:
     Create_Index create_index;
 
 
-    Create_Table* create_table = new Create_Table;
+    Create_Table create_table;
 
 
     void message_printer(string command);
@@ -55,6 +55,7 @@ private slots:
 
 private:
     void showTable (Table table);
+
     Table myTable;
 
     string entered_string;

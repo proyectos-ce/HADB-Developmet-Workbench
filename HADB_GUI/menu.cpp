@@ -17,6 +17,7 @@ Menu::~Menu()
 
 void Menu::on_ShowTables_BUTTON_clicked()
 {
+    show_tables.show_All();
     show_tables.show();
 }
 
@@ -30,12 +31,6 @@ void Menu::on_ShowMetadata_BUTTON_clicked()
     show_database.show();
 }
 
-void Menu::on_ShowComponents_BUTTON_clicked()
-{
-    show_components.show();
-}
-
-
 void Menu::on_ShowStructure_BUTTON_clicked()
 {
     show_structure.show();
@@ -44,4 +39,9 @@ void Menu::on_ShowStructure_BUTTON_clicked()
 void Menu::on_Manage_Database_BUTTON_clicked()
 {
     manage_database.show();
+}
+
+void Menu::on_database_clicked()
+{
+     manage_database.show();
 }

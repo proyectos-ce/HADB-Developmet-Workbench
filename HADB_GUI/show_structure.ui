@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Dialog</string>
+   <string>Structure Viewer</string>
   </property>
   <widget class="QDialogButtonBox" name="buttonBox">
    <property name="geometry">
@@ -81,10 +81,10 @@
   <widget class="QLabel" name="label_2">
    <property name="geometry">
     <rect>
-     <x>-20</x>
-     <y>0</y>
-     <width>1041</width>
-     <height>751</height>
+     <x>-40</x>
+     <y>-20</y>
+     <width>1091</width>
+     <height>791</height>
     </rect>
    </property>
    <property name="styleSheet">
