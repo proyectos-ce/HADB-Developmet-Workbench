@@ -31,7 +31,7 @@ public:
     Create_Index create_index;
 
 
-    Create_Table* create_table;
+    Create_Table* create_table = new Create_Table;
 
 
     void message_printer(string command);
