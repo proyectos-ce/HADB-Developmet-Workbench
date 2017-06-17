@@ -60,10 +60,13 @@ void Manage_Database::on_buttonBox_accepted()
 }
 
 void Manage_Database::on_pushButton_clicked(){
-   // entered_string = ui->LineEntry->text().toStdString();
+
+    comunication->sendMessage();
+
+    // entered_string = ui->LineEntry->text().toStdString();
     // message_printer(entered_string);
 
-    showTable(myTable);
+    //showTable(myTable);
 
 //    entered_string = ui->LineEntry->text().toStdString();
 //    std::cout << entered_string << std::endl;
@@ -76,6 +79,11 @@ void Manage_Database::on_pushButton_clicked(){
 //    ui->tableWidget->insertRow(ui->tableWidget->rowCount());
 //    ui->tableWidget->setItem(ui->tableWidget->rowCount()-1,0, new QTableWidgetItem(entered_string.c_str()));
 }
+void Manage_Database::setComunication(Comunication_Handler *value)
+{
+    comunication = value;
+}
+
 void Manage_Database::message_printer(string command) {
     if (table_onScreen){
         on_pushButton_4_clicked();

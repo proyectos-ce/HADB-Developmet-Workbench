@@ -12,3 +12,8 @@ Show_Database::~Show_Database()
 {
     delete ui;
 }
+
+void Show_Database::setComunication(Comunication_Handler *value)
+{
+    comunication = value;
+}

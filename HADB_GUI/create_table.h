@@ -3,7 +3,7 @@
 
 #include <QDialog>
 #include <string>
-
+#include"comunication_handler.h"
 
 
 
@@ -22,9 +22,11 @@ private:
 public:
     explicit Create_Table(QWidget *parent = 0);
     ~Create_Table();
+    Comunication_Handler* comunication;
 
 
 
+    void setComunication(Comunication_Handler *value);
 
 private slots:
     void on_buttonBox_accepted();

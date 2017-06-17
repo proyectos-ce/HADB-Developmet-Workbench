@@ -13,6 +13,11 @@ Create_Table::~Create_Table()
     delete ui;
 }
 
+void Create_Table::setComunication(Comunication_Handler *value)
+{
+    comunication = value;
+}
+
 
 void Create_Table::on_buttonBox_accepted()
 {

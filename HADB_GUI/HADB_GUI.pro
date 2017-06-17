@@ -23,7 +23,9 @@ SOURCES += main.cpp\
     drop_table.cpp \
     create_index.cpp \
     manage_database.cpp \
-    table.cpp
+    table.cpp \
+    connectionmanager.cpp \
+    comunication_handler.cpp
 
 HEADERS  += mainwindow.h \
     menu.h \
@@ -35,7 +37,11 @@ HEADERS  += mainwindow.h \
     drop_table.h \
     create_index.h \
     manage_database.h \
-    table.h
+    table.h \
+    connectionmanager.h \
+    ../../../../Descargas/json.hpp \
+    json.hpp \
+    comunication_handler.h
 
 FORMS    += mainwindow.ui \
     menu.ui \

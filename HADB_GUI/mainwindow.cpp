@@ -22,9 +22,20 @@ void MainWindow::on_Conect_BUTTON_clicked()
     portstr= ui->getPort->text().toStdString();
     try{
     port = std::stoi(portstr);
+
+        comunication = new Comunication_Handler();
+        connection = new ConnectionManager(ip, port);
+        comunication->setConnection(connection);
+
+
+
+
+
+
     if (true){
 
         menu.show();
+        menu.setComunication(comunication);
         this->hide();
 
     }

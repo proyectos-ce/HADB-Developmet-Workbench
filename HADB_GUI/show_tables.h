@@ -6,6 +6,7 @@
 #include <string>
 #include "table.h"
 #include "iostream"
+#include "comunication_handler.h"
 
 namespace Ui {
 class Show_Tables;
@@ -22,8 +23,11 @@ public:
     std::string entered_string;
     std::vector<std::string> table_names;
     QStringList rowList;
+    Comunication_Handler* comunication;
 
     void show_All();
+
+    void setComunication(Comunication_Handler *value);
 
 private:
     Ui::Show_Tables *ui;

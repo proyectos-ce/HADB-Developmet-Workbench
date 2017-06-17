@@ -3,6 +3,8 @@
 
 #include <QMainWindow>
 #include "menu.h"
+#include "connectionmanager.h"
+#include "comunication_handler.h"
 
 namespace Ui {
 class MainWindow;
@@ -26,6 +28,9 @@ private:
     string portstr;
     string ip;
     int port;
+    ConnectionManager* connection;
+    Comunication_Handler* comunication;
+
 };
 
 #endif // MAINWINDOW_H

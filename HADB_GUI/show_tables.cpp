@@ -12,6 +12,11 @@ Show_Tables::~Show_Tables()
 {
     delete ui;
 }
+
+void Show_Tables::setComunication(Comunication_Handler *value)
+{
+    comunication = value;
+}
 void Show_Tables::show_All(){
     ui->tableWidget->setRowCount(0);
     ui->tableWidget->setColumnCount(2);

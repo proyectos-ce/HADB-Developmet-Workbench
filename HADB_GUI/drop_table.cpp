@@ -12,3 +12,8 @@ Drop_Table::~Drop_Table()
 {
     delete ui;
 }
+
+void Drop_Table::setComunication(Comunication_Handler *value)
+{
+    comunication = value;
+}

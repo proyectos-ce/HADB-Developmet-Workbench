@@ -12,3 +12,8 @@ Create_Index::~Create_Index()
 {
     delete ui;
 }
+
+void Create_Index::setComunication(Comunication_Handler *value)
+{
+    comunication = value;
+}

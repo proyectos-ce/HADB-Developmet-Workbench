@@ -9,7 +9,7 @@
 #include "show_nodes.h"
 #include "show_structure.h"
 #include "show_tables.h"
-
+#include "comunication_handler.h"
 namespace Ui {
 class Menu;
 }
@@ -27,7 +27,11 @@ public:
     Show_Structure show_structure;
     Show_Tables show_tables;
 
+    Comunication_Handler* comunication;
 
+
+
+    void setComunication(Comunication_Handler *value);
 
 private slots:
     void on_ShowTables_BUTTON_clicked();

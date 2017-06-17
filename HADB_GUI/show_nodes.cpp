@@ -12,3 +12,8 @@ Show_Nodes::~Show_Nodes()
 {
     delete ui;
 }
+
+void Show_Nodes::setComunication(Comunication_Handler *value)
+{
+    comunication = value;
+}

@@ -127,9 +127,9 @@ background-color: rgba(170, 170, 255,0.8);</string>
    <property name="geometry">
     <rect>
      <x>0</x>
-     <y>0</y>
+     <y>-20</y>
      <width>1011</width>
-     <height>611</height>
+     <height>641</height>
     </rect>
    </property>
    <property name="text">
@@ -139,6 +139,26 @@ background-color: rgba(170, 170, 255,0.8);</string>
     <pixmap>fondo.jpg</pixmap>
    </property>
   </widget>
+  <widget class="QPushButton" name="ShowComponents_BUTTON">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>590</y>
+     <width>80</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgba(85, 0, 255,0.9);</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <zorder>ShowComponents_BUTTON</zorder>
   <zorder>label_4</zorder>
   <zorder>label_3</zorder>
   <zorder>label_2</zorder>

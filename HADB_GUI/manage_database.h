@@ -11,6 +11,7 @@
 #include "drop_table.h"
 #include <iostream>
 #include <string>
+#include "comunication_handler.h"
 
 //class Create_Table;
 using namespace std;
@@ -28,6 +29,7 @@ class Manage_Database : public QDialog
 
 public:
 
+    Comunication_Handler* comunication;
     Create_Index create_index;
 
 
@@ -39,6 +41,8 @@ public:
     Drop_Table drop_table;
     explicit Manage_Database(QWidget *parent = 0);
     ~Manage_Database();
+
+    void setComunication(Comunication_Handler *value);
 
 private slots:
     void on_buttonBox_accepted();

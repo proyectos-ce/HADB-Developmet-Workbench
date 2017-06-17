@@ -4,6 +4,7 @@
 #include <QDialog>
 #include <QtWidgets>
 
+
 namespace Ui {
 class Show_Structure;
 }
@@ -18,6 +19,7 @@ public:
     ~Show_Structure();
 
      QMovie *movie= new QMovie("structure.gif");
+
 
 private:
     Ui::Show_Structure *ui;

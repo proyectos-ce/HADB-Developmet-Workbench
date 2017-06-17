@@ -4,6 +4,7 @@
 #include <QDialog>
 #include <iostream>
 #include <string>
+#include "comunication_handler.h"
 
 
 using namespace std;
@@ -19,6 +20,9 @@ class Show_Database : public QDialog
 public:
     explicit Show_Database(QWidget *parent = 0);
     ~Show_Database();
+    Comunication_Handler* comunication;
+
+    void setComunication(Comunication_Handler *value);
 
 private:
     Ui::Show_Database *ui;
